@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercício Calculadora</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="page">
+
+  <div class="cabecalho">
+    <p>Exercício de progamação V2</p>
+    <h1>Calculadora</h1>
+  </div>
+
+  <!-- Início -->
+  <div class="card" id="card-0">
+    <div class="card-head">
+      <span class="card-num">INÍCIO</span>
+    </div>
+    <div class="card-body">
+      <div class="campo">
+        <input id="inp-nome" type="text" placeholder="Digite seu nome..."/>
+      </div>
+      <button class="btn" id="btn-0" onclick="execApresentacao()">Confirmar</button>
+      <div class="resultado" id="res-0"></div>
+    </div>
+  </div>
+
+  <!-- Tabuada -->
+  <div class="card card-oculto" id="card-1">
+    <div class="card-head">
+      <span class="card-titulo">Tabuada</span>
+    </div>
+    <div class="card-body">
+      <div class="campo">
+        <label for="inp-tab">Digite um número</label>
+        <input id="inp-tab" type="number" placeholder="Ex: 7"/>
+      </div>
+      <button class="btn" onclick="execTabuada()">Calcular</button>
+      <div class="resultado" id="res-1"></div>
+    </div>
+  </div>
+
+  <!-- Números Pares -->
+  <div class="card card-oculto" id="card-2">
+    <div class="card-head">
+      <span class="card-titulo">Números Pares</span>
+    </div>
+    <div class="card-body">
+      <div class="campo"><label>Digite o 1º número</label><input class="inp-par" type="number" placeholder="Ex: 4"/></div>
+      <div class="campo"><label>Digite o 2º número</label><input class="inp-par" type="number" placeholder="Ex: 7"/></div>
+      <div class="campo"><label>Digite o 3º número</label><input class="inp-par" type="number" placeholder="Ex: 12"/></div>
+      <div class="campo"><label>Digite o 4º número</label><input class="inp-par" type="number" placeholder="Ex: 9"/></div>
+      <div class="campo"><label>Digite o 5º número</label><input class="inp-par" type="number" placeholder="Ex: 6"/></div>
+      <button class="btn" onclick="execPares()">Filtrar pares</button>
+      <div class="resultado" id="res-2"></div>
+    </div>
+  </div>
+
+  <!-- Soma de Dígitos -->
+  <div class="card card-oculto" id="card-3">
+    <div class="card-head">
+      <span class="card-titulo">Soma de Dígitos</span>
+    </div>
+    <div class="card-body">
+      <div class="campo">
+        <label for="inp-soma">Digite um número maior que 10</label>
+        <input id="inp-soma" type="number" placeholder="Ex: 1234"/>
+      </div>
+      <button class="btn" onclick="execSoma()">Calcular</button>
+      <div class="resultado" id="res-3"></div>
+    </div>
+  </div>
+
+  <!-- Fatorial -->
+  <div class="card card-oculto" id="card-4">
+    <div class="card-head">
+      <span class="card-titulo">Fatorial</span>
+    </div>
+    <div class="card-body">
+      <div class="campo">
+        <label for="inp-fat">Digite um número</label>
+        <input id="inp-fat" type="number" placeholder="Ex: 10"/>
+      </div>
+      <button class="btn" onclick="execFatorial()">Calcular</button>
+      <div class="resultado" id="res-4"></div>
+    </div>
+  </div>
+
+  <!-- Números Primos -->
+  <div class="card card-oculto" id="card-5">
+    <div class="card-head">
+      <span class="card-titulo">Número Primo</span>
+    </div>
+    <div class="card-body">
+      <div class="campo">
+        <label for="inp-primo">Digite um número maior que 1</label>
+        <input id="inp-primo" type="number" placeholder="Ex: 17"/>
+      </div>
+      <button class="btn" onclick="execPrimo()">Verificar</button>
+      <div class="resultado" id="res-5"></div>
+    </div>
+  </div>
+
+  <!-- Botão reiniciar -->
+  <div id="area-reiniciar" style="display:none; text-align:center">
+    <button class="btn-reiniciar" onclick="reiniciar()">↺ Reiniciar tudo</button>
+  </div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
